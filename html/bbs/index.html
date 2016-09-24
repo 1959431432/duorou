@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>交流论坛</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <style>
+    </style>
+</head>
+<body>
+ <ul class="aui-grid-sixteen" id="bbsList">
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-pay aui-text-primary"></span>
+ 		<p>景天科</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-send aui-text-danger"></span>
+ 		<p>番杏科</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-shop aui-text-warning"></span>
+ 		<p>十二卷</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-ticket aui-text-pink"></span>
+ 		<p>仙人球</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-cascades aui-text-dark"></span>
+ 		<p>块状球根</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-discover aui-text-info"></span>
+ 		<p>芦荟</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-scan aui-text-blue"></span>
+ 		<p>龙舌兰</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-settings aui-text-danger"></span>
+ 		<p>大戟科</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-form aui-text-warning"></span>
+ 		<p>多肉壁纸</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-pic aui-text-warning"></span>
+ 		<p>交易集市</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-filter aui-text-pink"></span>
+ 		<p>查找大棚</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-footprint aui-text-dark"></span>
+ 		<p>分享交换</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-home aui-text-danger"></span>
+ 		<p>活动版块</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-profile aui-text-warning"></span>
+ 		<p>综合论坛</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-qrcode aui-text-pink"></span>
+ 		<p>花友问答</p>
+ 	</li>
+ 	<li class="aui-col-xs-3 aui-text-center">
+ 		<span class="aui-iconfont aui-icon-service aui-text-dark"></span>
+ 		<p>站务帮助</p>
+ 	</li>
+ </ul>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function(){
+			
+		};
+        var LiS = $api.domAll('#bbsList li');
+        for( var i=0,lLen = LiS.length; i<lLen; i++ ){
+            LiS[i].onclick = function()
+            {
+                var index = this.index;
+                console.log( index );
+                // api.openWin({
+                //     name:'list'+i,
+                //     url:'./lists.html',
+                //     pageParam:{
+                //         id:i,
+                //         name:'张三'
+                //     }
+                // });
+            }
+        }
+	</script>
+</body>
+</html>

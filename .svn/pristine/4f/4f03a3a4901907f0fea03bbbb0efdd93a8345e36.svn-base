@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <style>
+    	header.aui-bar-nav{
+          padding: 0;
+          padding-top:20px;
+          background-color: #6ab494;
+    	}
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav aui-bar-success">
+		<a class="aui-pull-left" onclick="closeWin();">
+			<span class="aui-iconfont aui-icon-left"></span>
+		</a>
+		<div class="aui-title">顶部导航栏</div>
+	</header>
+	<ul class="aui-list-view">
+		<li class="aui-list-view-cell" data-win="list_arrow">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_arrow">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-info">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_arrow">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-warning">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+		<li class="aui-list-view-cell" data-win="list_thumb">
+			<a class="aui-arrow-right">
+				带有角标和箭头的列表
+				<span class="aui-badge aui-badge-danger">12</span>
+			</a>
+		</li>
+	</ul>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		api.addEventListener({
+		    name:'scrolltobottom',
+		    extra:{
+		        threshold:0            //设置距离底部多少距离时触发，默认值为0，数字类型
+		    }
+		}, function(ret, err){        
+		    if( ret ){
+		        
+		    }else{
+		        alert( JSON.stringify( err ) );
+		    }
+		});
+		var pageParam = api.pageParam;
+	};
+
+	function closeWin() {
+		api.closeWin({});
+	}
+</script>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title>多肉美图</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<style>
+			  html, body {	
+            height: 100%;	
+            min-width: 320px;	
+        }	
+        body {	
+            font-size: 14px;	
+        }	
+        /*header*/	
+        .header {	
+            display: -webkit-box;	
+            display: -webkit-flex;	
+            display: flex;	
+            background-color: #ffffff;	
+            -webkit-box-pack: center;	
+            -webkit-box-align: center;	
+        }	
+        .header-title {	
+            -webkit-box-flex: 1;	
+            -webkit-flex: 1;	
+            flex: 1;	
+        }	
+        .header a {	
+            display: block;	
+            background-size: 30px;	
+            padding: 20px;	
+            background-repeat: no-repeat;	
+            background-position: center;	
+        }	
+        .header .user {	
+            background-image: url("../../image/user.png");	
+        }	
+	
+        .header .logo {	
+            background-size: 45px;	
+            background-image: url("../../image/logo.png");	
+        }	
+	
+        /*	
+            iscroll	
+        */	
+        #wrapper {	
+            position: relative;	
+            z-index: 1;	
+            height: 35px;	
+            width: 90%;	
+            overflow: hidden;	
+            -ms-touch-action: none;	
+	
+        }	
+	
+        #scroller {	
+            position: absolute;	
+            z-index: 1;	
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);	
+            width: 200%;	
+            -webkit-transform: translateZ(0);	
+            -moz-transform: translateZ(0);	
+            -ms-transform: translateZ(0);	
+            -o-transform: translateZ(0);	
+            transform: translateZ(0);	
+            -webkit-touch-callout: none;	
+            -webkit-user-select: none;	
+            -moz-user-select: none;	
+            -ms-user-select: none;	
+            user-select: none;	
+            -webkit-text-size-adjust: none;	
+            -moz-text-size-adjust: none;	
+            -ms-text-size-adjust: none;	
+            -o-text-size-adjust: none;	
+            text-size-adjust: none;	
+        }	
+	
+        #scroller ul {	
+            list-style: none;	
+            padding: 0;	
+            margin: 0;	
+            display: -webkit-box;	
+            display: -webkit-flex;	
+            display: flex;	
+        }	
+	
+        #scroller li {	
+            width: 10%;	
+            line-height: 35px;	
+            font-size: 14px;	
+            overflow: hidden;	
+            text-align: center;	
+            color: #323237;	
+        }	
+	
+        /*iscroll*/	
+	
+        .nav_active {	
+            color: #6ab494 !important;	
+            font-size: 16px !important;	
+        }	
+	
+        nav {	
+            width: 100%;	
+            display: -webkit-box;	
+            display: -webkit-flex;	
+            display: flex;	
+            background-color: #F6F6F6;	
+        }	
+        .arrow_down {	
+            display: block;	
+            background-size: 15px;	
+            background-repeat: no-repeat;	
+            background-position: center;	
+            padding: 15px;	
+            background-image: url('../../image/nav_arrow.png');	
+            -webkit-box-flex: 1;	
+            -webkit-flex: 1;	
+            flex: 1;	
+            -webkit-transform: rotate(180deg);	
+            -webkit-transition: All .5s ease;	
+        }	
+	
+		</style>
+	</head>
+	<body>
+		<nav>	
+		    <div id="wrapper">	
+		        <div id="scroller">	
+		            <ul>	
+		                <li class="nav_active" tapmode="" onclick="randomSwitchBtn(this)">景天科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">十二科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">菊科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">番杏科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">大戟科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">独尾草科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">龙舌兰科</li>	
+		                <li class="" tapmode="" onclick="randomSwitchBtn(this)">仙人掌科</li>	
+		            </ul>	
+		        </div>	
+		    </div>	
+		    <a class="arrow_down" onclick="arrow_down()" tapmode=""></a>	
+		</nav>
+		
+		<ul class="aui-list-view aui-grid-view">
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo3.png">
+			</li>
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo2.png">
+			</li>
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo5.png">
+			</li>
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo6.png">
+			</li>
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo1.png">
+			</li>
+			<li class="aui-list-view-cell aui-img aui-col-xs-4">
+				<img class="aui-img-object" src="../../image/aui/demo4.png">
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script>
+		apiready = function(){
+
+		}
+		// 随意切换按钮
+	    function randomSwitchBtn( tag ) {
+	        if( tag == $api.dom('#scroller li.nav_active') )return;
+	        var eFootLis = $api.domAll('#scroller li'),
+	            index = 0;
+	        for (var i = 0,len = eFootLis.length; i < len; i++) {
+	            if( tag == eFootLis[i] ){
+	                index = i;
+	            }else{
+	                $api.removeCls(eFootLis[i], 'nav_active');
+	            }
+	        }
+	        $api.addCls( eFootLis[index], 'nav_active');
+	    }
+	    
+	    function arrow_down()
+	    {
+    		api.openWin({
+                name: 'types',
+                url: './types_window.html'
+            });
+	    }
+	</script>
+</html>

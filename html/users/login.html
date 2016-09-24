@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+
+    <style>
+    	header.aui-bar-nav{
+          padding: 0;
+          padding-top:20px;
+          background-color: #6ab494;
+    	}
+    </style>
+</head>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-dark">
+	<a class="aui-pull-left" onclick="closeWin()">
+		<span class="aui-iconfont aui-icon-left"></span>
+		返回
+	</a>
+	<div class="aui-title">登录表单</div>
+</header>
+
+  <div id="login">
+    <div class="wrapper">
+        <div class="login">
+            <form action="#" method="post" class="container offset1 loginform">
+                <div id="owl-login">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad">
+                    <div class="aui-form">
+                    	<div class="aui-input-row">
+                    		<i class="aui-input-addon  aui-iconfont aui-icon-people"></i>
+                    		<input type="text" class="aui-input" placeholder="name">
+                    	</div>
+                    	<div class="aui-input-row">
+                   	 	<i class="aui-input-addon  aui-iconfont aui-icon-lock"></i>
+                    		<input id="password" type="password" class="aui-input" placeholder="password">
+                    	</div>
+                </div>
+                </div>
+                <div class="form-actions"><a href="#" tabindex="5" class="btn pull-left btn-link text-muted">忘记密码?</a><a href="#" tabindex="6" class="btn btn-link text-muted">注册</a>
+                    <button type="submit" tabindex="4" class="btn btn-success">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+
+  function closeWin() {
+    api.closeWin();
+  }
+
+  $api.byId('password').onfocus = function()
+  {
+    var input = $api.byId('owl-login')
+    $api.addCls( input, 'password' );
+  }
+
+  $api.byId('password').onblur = function()
+  {
+    var input = $api.byId('owl-login')
+    $api.removeCls( input, 'password' );
+  }
+
+	
+</script>
+</html>

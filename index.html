@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>多肉哥的多肉铺</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/aui.css"/>
+    <style>
+        header{ background-color: #6ab494; }
+        header ul li { height: 50px; line-height: 50px; text-align: center; display: none; color: #fff; position: relative;font-size: 18px;  }
+        header ul li.active{ display: block; }
+        header .search {
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("./image/pluginboard_icon_search@2x.png");
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-top: 4px;
+            position: absolute;
+            right: 10px;
+            top: 4px;
+        }
+        header .menu {
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("./image/menu.png");
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            float: right;
+            margin: 10px 10px 0 0;
+        }
+
+        #footer{  background-color: #6ab494; }
+        #footer ul li{  padding-top: 36px; padding-bottom: 4px; background: url() no-repeat center 2px; background-size: auto 30px; text-align: center; }
+        #footer ul li.active{ color: #fff; }
+        #footer ul li:nth-child(1){ background-image: url(./image/bottombtn0101.png); }
+        #footer ul li:nth-child(2){ background-image: url(./image/bottombtn0201.png); }
+        #footer ul li:nth-child(3){ background-image: url(./image/bottombtn0301.png); }
+        #footer ul li:nth-child(4){ background-image: url(./image/main_index_my_normal.png); }
+        #footer ul li:nth-child(1).active{ background-image: url(./image/bottombtn0102.png); }
+        #footer ul li:nth-child(2).active{ background-image: url(./image/bottombtn0202.png); }
+        #footer ul li:nth-child(3).active{ background-image: url(./image/bottombtn0302.png); }
+        #footer ul li:nth-child(4).active{ background-image: url(./image/main_index_my_pressed.png); }
+    </style>
+</head>
+<body>
+<div id="wrap" class="flex-wrap flex-vertical">
+    <header>
+        <ul>
+            <li class="border-b active">
+                <span>多肉美图</span>
+                <a class="search" tapmode="" onclick="openSerch()"></a>
+            </li>
+            <li class="border-b" >养殖方法</li>
+            <li class="border-b" >交流论坛</li>
+            <li class="border-b" >个人中心</li>
+        </ul>
+    </header>
+    <div id="main" class="flex-con">
+
+    </div>
+    <footer id="footer" class="border-t">
+        <ul class="flex-wrap" >
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" src="./html/beauites/index.html" name="beauites" class="flex-con active" >
+                多肉美图
+            </li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" src="./html/cultivation/index.html" name="cultivation" class="flex-con" >养殖方法</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" src="./html/bbs/index.html" name="bbs" class="flex-con" >交流论坛</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this );" src="./html/users/index.html" name="users" class="flex-con" >个人中心</li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="script/api.js"></script>
+<script type="text/javascript">
+    apiready = function () {
+        $api.fixStatusBar( $api.dom('header') );
+        api.setStatusBarStyle({
+            style: 'dark',
+            color: '#6ab494'
+        });
+        funIniGroup();
+    }
+
+
+    function funIniGroup(){
+        var eFooterLis = $api.domAll('footer li'),
+            frames = [];
+        for (var i = 0,len = eFooterLis.length; i < len; i++) {
+            var url = eFooterLis[i].getAttribute('src');
+            var name = eFooterLis[i].getAttribute('name');
+            frames.push( { 
+                name: name, 
+                url: url, 
+                bgColor : 'rgba(0,0,0,.2)',
+                bounces:true
+            } )
+        }
+        api.openFrameGroup({
+            name: 'group',
+            scrollEnabled: false,
+            rect: {
+                x: 0, 
+                y: $api.dom('header').offsetHeight, 
+                w: api.winWidth, 
+                h: $api.dom('#main').offsetHeight
+            },
+            index: 0,
+            frames: frames
+        }, function (ret, err) {
+
+        });
+    }
+
+    // 随意切换按钮
+    function randomSwitchBtn( tag ) {
+        if( tag == $api.dom('#footer li.active') )return;
+        var eFootLis = $api.domAll('#footer li'),
+            eHeaderLis = $api.domAll('header li'),
+            index = 0;
+        for (var i = 0,len = eFootLis.length; i < len; i++) {
+            if( tag == eFootLis[i] ){
+                index = i;
+            }else{
+                $api.removeCls(eFootLis[i], 'active');
+                $api.removeCls(eHeaderLis[i], 'active');
+            }
+        }
+        $api.addCls( eFootLis[index], 'active');
+        $api.addCls( eHeaderLis[index], 'active');
+        api.setFrameGroupIndex({
+            name: 'group',
+            index: index
+        });
+    }
+
+    function openSerch(){
+        var UISearchBar = api.require('UISearchBar');
+        UISearchBar.open({
+            placeholder: '请输入搜索关键字',
+            historyCount: 10,
+            showRecordBtn: true,
+            texts: {
+                cancelText: '取消',
+                clearText: '清除搜索记录'
+            },
+            styles: {
+                navBar: {
+                    bgColor: '#FFFFFF',
+                    borderColor: '#ccc'
+                },
+                searchBox: {
+                    bgImg: '',
+                    color: '#000',
+                    height: 44,
+                },
+                cancel: {
+                    bg: 'rgba(0,0,0,0)',
+                    color: '#D2691E',
+                    size: 16
+                },
+                list: {
+                    color: '#696969',
+                    bgColor: '#FFFFFF',
+                    borderColor: '#eee',
+                    size: 16
+                },
+                clear: {
+                    color: '#000000',
+                    borderColor: '#ccc',
+                    size: 16
+                }
+            }
+        }, function(ret, err){
+            if( ret ){
+                 alert( JSON.stringify( ret ) );
+            }else{
+                 alert( JSON.stringify( err ) );
+            } 
+        });
+    }
+</script>
